@@ -3,13 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NammaWeb AI Learning Suite | AI for NEET, CET & JEE (Medical & Engg)</title>
-  <meta name="description" content="AI-powered diagnostic and learning suite for NEET (Medical), CET, and JEE (Engineering). Master high-yield concepts with adaptive intelligence." />
+  <title>NammaWeb AI Learning Suite | AI for NEET, KCET & JEE Coaching in Kengeri, Bengaluru</title>
+  <meta name="description" content="AI-powered diagnostic and coaching suite for NEET, KCET, and JEE in Kengeri, Bengaluru. 125-day hands-on workshops, 3-month crash courses, and 6-month intensive programs." />
+  <meta name="keywords" content="NEET coaching Kengeri, KCET classes Kengeri Bengaluru, JEE Main Advanced coaching Mysore Road, AI learning competitive exams Bangalore" />
+
+  <!-- GEO & Local SEO Meta Tags -->
+  <meta name="geo.region" content="IN-KA" />
+  <meta name="geo.placename" content="Kengeri, Bengaluru" />
+  <meta name="geo.position" content="12.9177;77.4838" />
+  <meta name="ICBM" content="12.9177, 77.4838" />
+
+  <!-- Schema.org JSON-LD for Local SEO, AEO & Voice Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "NammaWeb AI Learning Suite",
+    "image": "https://nammaweb.com/logo.jpg",
+    "email": "info@nammaweb.com",
+    "telephone": "+919241527429",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mysore Road, Near Kengeri Metro Station",
+      "addressLocality": "Kengeri, Bengaluru",
+      "addressRegion": "Karnataka",
+      "postalCode": "560060",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "12.9177",
+      "longitude": "77.4838"
+    },
+    "offers": [
+      {
+        "@type": "Course",
+        "name": "125 Days AI Problem-Solving Workshop",
+        "description": "Daily hands-on problem simulations and cognitive weak-spot telemetry for NEET, KCET, JEE"
+      },
+      {
+        "@type": "Course",
+        "name": "3 Months AI Accelerator Crash Course",
+        "description": "Rapid syllabus coverage and speed mastery for competitive engineering and medical exams"
+      },
+      {
+        "@type": "Course",
+        "name": "6 Months AI Comprehensive Rank Architecture",
+        "description": "Deep conceptual deconstruction and adaptive learning engine integration"
+      }
+    ]
+  }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -29,6 +78,20 @@
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             serif: ['"Playfair Display"', 'serif']
+          },
+          animation: {
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' }
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '.85', transform: 'scale(1.03)' }
+            }
           }
         }
       }
@@ -37,521 +100,586 @@
 
   <style>
     .glass-nav {
-      background: rgba(255, 255, 255, 0.90);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
     }
     .hero-radial {
-      background: radial-gradient(circle at 15% 20%, rgba(0, 91, 92, 0.07) 0%, transparent 45%),
-                  radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 45%);
+      background: radial-gradient(circle at 15% 20%, rgba(0, 91, 92, 0.09) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 45%);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #07797B;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand selection:text-white">
 
-  <!-- ======================== NAVIGATION ======================== -->
+  <!-- TOP LOCAL NOTIFICATION BAR -->
+  <div class="bg-brand-dark text-slate-200 text-xs py-2 px-4 text-center tracking-wide border-b border-white/10 flex flex-wrap justify-center items-center gap-3">
+    <span>📍 Kengeri Satellite Centre, Mysore Road, Bengaluru</span>
+    <span class="hidden sm:inline">|</span>
+    <span>⚡ Admissions Open: 125-Day AI Workshops, 3 & 6-Month Batches</span>
+    <a href="https://wa.me/919241527429?text=Hi%20NammaWeb,%20I%20want%20to%20know%20about%20your%20NEET/KCET/JEE%20AI%20Course." target="_blank" class="text-brand-gold font-bold underline hover:text-white transition">Chat with Academic Director</a>
+  </div>
+
+  <!-- NAVIGATION -->
   <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
-      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-3.5 group">
-        <div class="w-11 h-11 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center bg-white rounded-xl shadow-sm border border-slate-200/60 p-1 overflow-hidden shrink-0">
-          <img 
-            src="./logo.jpg" 
-            alt="NammaWeb Logo" 
-            class="w-full h-full object-contain block"
-            loading="eager"
-            decoding="sync"
-          />
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 bg-white rounded-xl shadow-sm border border-slate-200/60 p-1 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
+          <img src="./logo.jpg" alt="NammaWeb AI Learning Suite Logo" class="w-full h-full object-contain" />
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-xl tracking-tight text-slate-900 leading-none">nammaweb</span>
-          <span class="text-[9px] uppercase font-bold tracking-widest text-brand mt-1">AI Learning Suite</span>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brand mt-1">AI Learning Suite • Kengeri</span>
         </div>
       </a>
 
       <!-- DESKTOP NAV -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-600">
-        <button onclick="switchPage('home')" id="nav-btn-home" class="transition-colors hover:text-brand text-brand">Main Suite</button>
-        <a href="#gallery" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#gallery'},100);}" class="transition-colors hover:text-brand">Curriculum Imagery</a>
-        <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="transition-colors hover:text-brand">Booking & Tiers</a>
-        <button onclick="switchPage('blog')" id="nav-btn-blog" class="transition-colors hover:text-brand">SEO Insights Blog</button>
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-wider text-slate-600">
+        <a href="#hero" class="transition hover:text-brand">Curriculum</a>
+        <a href="#workshops" class="transition hover:text-brand">125-Day Workshops</a>
+        <a href="#courses" class="transition hover:text-brand">3 & 6 Months</a>
+        <a href="#kengeri-campus" class="transition hover:text-brand">Kengeri Campus</a>
+        <a href="#enroll" class="transition hover:text-brand text-brand">Instant Register</a>
       </nav>
 
-      <!-- CTA BUTTON -->
-      <div class="flex items-center gap-3">
-        <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-200 shadow-sm hover:shadow-brand/25">
-          Enroll Now
+      <!-- FAST CONTACT BUTTONS -->
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleChatModal()" class="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-brand/10 text-brand border border-brand/20 hover:bg-brand hover:text-white transition shadow-sm">
+          <span>🤖</span>
+          <span class="hidden sm:inline">Ask AI Bot</span>
+        </button>
+        <a href="https://wa.me/919241527429?text=Hi%20NammaWeb,%20please%20send%20me%20the%20AI%20Course%20Curriculum%20details." target="_blank" class="flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-emerald-600 hover:bg-emerald-700 transition shadow-sm animate-pulse-glow">
+          <span>💬</span>
+          <span>WhatsApp</span>
         </a>
       </div>
     </div>
-
-    <!-- MOBILE SUB-BAR -->
-    <div class="md:hidden flex border-t border-slate-200 bg-white px-4 py-2 justify-around text-[11px] font-bold uppercase tracking-wider text-slate-600">
-      <button onclick="switchPage('home')" id="mob-btn-home" class="text-brand">Main Suite</button>
-      <button onclick="switchPage('blog')" id="mob-btn-blog" class="text-slate-600">SEO Blog</button>
-      <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="text-brand font-extrabold">Book Seat</a>
-    </div>
   </header>
 
-  <!-- ======================== PAGE 1: HOME & BOOKING ======================== -->
-  <main id="page-home" class="block">
-    
-    <!-- HERO SECTION -->
-    <section class="relative hero-radial pt-14 pb-20 border-b border-slate-200/70">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-semibold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
-            AI-Engineered Cognitive Learning Architecture
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-slate-900 leading-[1.14]">
-            nammaweb <span class="text-brand italic">ai learning suite</span> for neet / cet / jee
-            <span class="block text-xl sm:text-2xl font-sans font-normal text-slate-500 mt-2">(Medical &amp; Engg)</span>
-          </h1>
-
-          <!-- 6 LINE SPECIFICATION -->
-          <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm space-y-2.5 text-slate-700 text-sm sm:text-base leading-relaxed">
-            <p class="font-semibold text-brand text-xs uppercase tracking-wider mb-1">Pedagogical Blueprint (NEET / CET / JEE):</p>
-            <p><span class="font-bold text-slate-900">Line 1:</span> NammaWeb AI Learning Suite unifies real-time cognitive analytics with premier test-taking methodologies.</p>
-            <p><span class="font-bold text-slate-900">Line 2:</span> NEET Medical modules focus rigorously on NCERT taxonomy mastery, human anatomy, and reaction energetics.</p>
-            <p><span class="font-bold text-slate-900">Line 3:</span> CET programs specialize in rapid-fire formula deduction, eliminating bottlenecks within 60-second time thresholds.</p>
-            <p><span class="font-bold text-slate-900">Line 4:</span> JEE Engineering modules deconstruct advanced rotational mechanics, multi-variable calculus, and modern physics.</p>
-            <p><span class="font-bold text-slate-900">Line 5:</span> Our diagnostic machine learning engine preemptively catches student retention decay prior to national mock exams.</p>
-            <p><span class="font-bold text-slate-900">Line 6:</span> Delivering precision performance, verified All-India percentile rank escalations, and unshakeable confidence.</p>
-          </div>
-
-          <div class="flex flex-wrap gap-4 pt-2">
-            <a href="#booking" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-300 shadow-lg shadow-brand/20">
-              Explore Seats &amp; Indian Pricing
-            </a>
-            <button onclick="switchPage('blog')" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-800 bg-white border border-slate-300 hover:border-brand transition-all shadow-sm">
-              Read SEO Pedagogical Article
-            </button>
-          </div>
-        </div>
-
-        <!-- HERO RIGHT -->
-        <div class="lg:col-span-5">
-          <div class="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-xl space-y-4">
-            <div class="relative rounded-2xl overflow-hidden h-64 bg-slate-100">
-              <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" 
-                alt="NEET Clinical Medical Lab Simulator" 
-                class="w-full h-full object-cover"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-white bg-brand/90 px-3 py-1 rounded-md">
-                Live Cognitive Telemetry
-              </span>
-            </div>
-            <div class="space-y-2">
-              <div class="flex justify-between items-center text-xs">
-                <span class="font-bold text-brand uppercase tracking-wider">Predictive AI Suite</span>
-                <span class="text-emerald-600 font-semibold">● 99.4% Model Confidence</span>
-              </div>
-              <h3 class="font-serif text-lg font-bold text-slate-900">Autonomous Diagnostic Accuracy</h3>
-              <p class="text-xs text-slate-500 leading-relaxed">Cross-mapping question trends across 20+ years of NEET, Karnataka CET, and JEE Main/Advanced examinations with deep neural networks.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ======================== 4 PHOTO SECTION ======================== -->
-    <section id="gallery" class="py-20 bg-white border-b border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mb-14">
-          <span class="text-xs uppercase font-bold tracking-widest text-brand block mb-2">Curriculum Visual Assets</span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">NEET / CET / JEE (Medical &amp; Engg) Image Gallery</h2>
-          <p class="text-slate-500 text-sm mt-2">Explore the integrated environments powering our medical and engineering test architectures.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Image 1: NEET (Medical) -->
-          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div class="h-60 overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80" 
-                alt="NEET Medical Clinical Biology" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
-                NEET Medical
-              </span>
-            </div>
-            <div class="p-5 space-y-1.5">
-              <h3 class="font-bold text-sm text-slate-900">Clinical Biology &amp; Anatomy</h3>
-              <p class="text-xs text-slate-500 leading-relaxed">NCERT-aligned semantic parsing with 3D anatomical modeling for NEET aspirants.</p>
-            </div>
-          </div>
-
-          <!-- Image 2: JEE (Engineering) -->
-          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div class="h-60 overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" 
-                alt="JEE Advanced Engineering Applied Physics" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span class="absolute top-3 left-3 bg-blue-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
-                JEE Engineering
-              </span>
-            </div>
-            <div class="p-5 space-y-1.5">
-              <h3 class="font-bold text-sm text-slate-900">Advanced Applied Mechanics</h3>
-              <p class="text-xs text-slate-500 leading-relaxed">Deep vector calculus and quantum state question synthesizers designed for IIT-JEE ranks.</p>
-            </div>
-          </div>
-
-          <!-- Image 3: CET -->
-          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div class="h-60 overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" 
-                alt="CET Speed Examination Strategy" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
-                CET Engine
-              </span>
-            </div>
-            <div class="p-5 space-y-1.5">
-              <h3 class="font-bold text-sm text-slate-900">Rapid Calculation Benchmarks</h3>
-              <p class="text-xs text-slate-500 leading-relaxed">High-tempo cognitive execution modules guaranteeing maximum velocity in CET tests.</p>
-            </div>
-          </div>
-
-          <!-- Image 4: Unified Chemistry -->
-          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-            <div class="h-60 overflow-hidden relative">
-              <img 
-                src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=800&q=80" 
-                alt="Unified Chemistry Lab Medical & Engg" 
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
-                Unified Core
-              </span>
-            </div>
-            <div class="p-5 space-y-1.5">
-              <h3 class="font-bold text-sm text-slate-900">Organic Reaction Simulation</h3>
-              <p class="text-xs text-slate-500 leading-relaxed">Mechanism forecasting and molecular resonance engines common to Medical &amp; Engg.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================== BOOKING & INDIAN PRICING SECTION ======================== -->
-    <section id="booking" class="py-24 bg-brand-surface border-b border-slate-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase font-bold tracking-widest text-brand block mb-2">Admissions &amp; Transparent Indian Pricing</span>
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Select Your Examination Track</h2>
-          <p class="text-slate-500 text-sm mt-3">Guaranteed seat allocations with instant access to the complete NammaWeb AI algorithm suite.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          
-          <!-- JEE: ₹25,999 -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
-            <div>
-              <div class="flex justify-between items-center mb-4">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">Engineering Track</span>
-                <span class="text-[10px] font-bold uppercase bg-slate-100 text-slate-600 px-3 py-0.5 rounded-full">Core</span>
-              </div>
-              <h3 class="text-2xl font-serif font-bold text-slate-900">JEE Suite</h3>
-              <p class="text-xs text-slate-500 mt-2 mb-6">Engineered exclusively for JEE Main &amp; Advanced aspirants seeking IIT/NIT admissions.</p>
-              
-              <div class="mb-6">
-                <div class="text-4xl font-extrabold text-slate-900">₹25,999</div>
-                <div class="text-xs text-slate-400 mt-1">Complete Annual Enrollment • All Modules</div>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6">
-                <li class="flex items-center gap-2">✓ Advanced Mathematics &amp; Physics AI engines</li>
-                <li class="flex items-center gap-2">✓ 15,000+ JEE Advanced level simulated items</li>
-                <li class="flex items-center gap-2">✓ Real-time multi-step derivation checkers</li>
-                <li class="flex items-center gap-2">✓ AIR benchmark percentile forecasting</li>
-              </ul>
-            </div>
-
-            <button onclick="selectCourse('JEE (Engineering)', '₹25,999')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition-colors">
-              Book JEE (₹25,999)
-            </button>
-          </div>
-
-          <!-- NEET: ₹29,999 -->
-          <div class="bg-white rounded-3xl p-8 border-2 border-brand relative flex flex-col justify-between shadow-xl ring-4 ring-brand/5">
-            <div class="absolute -top-3.5 right-8 bg-brand text-white px-3.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
-              Most Popular
-            </div>
-            <div>
-              <div class="flex justify-between items-center mb-4">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand">Medical Track</span>
-                <span class="text-[10px] font-bold uppercase bg-brand/10 text-brand px-3 py-0.5 rounded-full">Flagship</span>
-              </div>
-              <h3 class="text-2xl font-serif font-bold text-slate-900">NEET Suite</h3>
-              <p class="text-xs text-slate-500 mt-2 mb-6">Designed for ambitious medical candidates aiming for AIIMS and top government medical colleges.</p>
-              
-              <div class="mb-6">
-                <div class="text-4xl font-extrabold text-brand">₹29,999</div>
-                <div class="text-xs text-slate-400 mt-1">Complete Annual Enrollment • Medical Focus</div>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-700 border-t border-slate-100 pt-6 font-medium">
-                <li class="flex items-center gap-2">✓ Complete NCERT Line-by-Line AI memory bank</li>
-                <li class="flex items-center gap-2">✓ Botany &amp; Zoology diagrammatic flash diagnostics</li>
-                <li class="flex items-center gap-2">✓ Daily 180-Question timed speed drills</li>
-                <li class="flex items-center gap-2">✓ Negative marking elimination framework</li>
-              </ul>
-            </div>
-
-            <button onclick="selectCourse('NEET (Medical)', '₹29,999')" class="w-full mt-8 py-3.5 rounded-xl bg-brand text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-dark transition-colors shadow-md">
-              Book NEET (₹29,999)
-            </button>
-          </div>
-
-          <!-- CET: ₹39,999 -->
-          <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
-            <div>
-              <div class="flex justify-between items-center mb-4">
-                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">State Level Entrance</span>
-                <span class="text-[10px] font-bold uppercase bg-slate-100 text-slate-600 px-3 py-0.5 rounded-full">Intensive</span>
-              </div>
-              <h3 class="text-2xl font-serif font-bold text-slate-900">CET Suite</h3>
-              <p class="text-xs text-slate-500 mt-2 mb-6">State-level elite ranking preparation covering both Engineering &amp; Allied Medical sciences.</p>
-              
-              <div class="mb-6">
-                <div class="text-4xl font-extrabold text-slate-900">₹39,999</div>
-                <div class="text-xs text-slate-400 mt-1">Dual Engineering + Medical State Comprehensive</div>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6">
-                <li class="flex items-center gap-2">✓ State syllabus + PUC integration matrix</li>
-                <li class="flex items-center gap-2">✓ Sub-45-second question tackling strategies</li>
-                <li class="flex items-center gap-2">✓ 25 Full-length CET diagnostic mock exams</li>
-                <li class="flex items-center gap-2">✓ Dedicated senior academic counselor helpline</li>
-              </ul>
-            </div>
-
-            <button onclick="selectCourse('CET (State Entrance)', '₹39,999')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition-colors">
-              Book CET (₹39,999)
-            </button>
-          </div>
-
-        </div>
-
-        <!-- FORM -->
-        <div id="booking-section" class="mt-16 bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 max-w-2xl mx-auto shadow-md">
-          <div class="text-center mb-8">
-            <span class="text-[10px] uppercase font-bold tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">Fast-Track Registration</span>
-            <h3 class="text-2xl font-serif font-bold text-slate-900 mt-3">Reserve Candidate Admission</h3>
-            <p class="text-xs text-slate-500 mt-1">Immediate verification and syllabus activation via our academic portal.</p>
-          </div>
-
-          <form onsubmit="handleBooking(event)" class="space-y-4">
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Selected Program &amp; Tuition Fee</label>
-              <input type="text" id="bookingCourseInput" value="NEET (Medical) - ₹29,999" readonly class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none" />
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Student / Parent Name</label>
-                <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
-              </div>
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone / WhatsApp Number</label>
-                <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address</label>
-              <input type="email" required placeholder="applicant@nammaweb.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
-            </div>
-
-            <button type="submit" class="w-full py-4 rounded-xl text-white bg-brand hover:bg-brand-dark font-bold text-xs uppercase tracking-widest transition-all shadow-md mt-4">
-              Confirm &amp; Proceed to Enrollment
-            </button>
-          </form>
-          <div id="booking-alert" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-semibold text-center"></div>
-        </div>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ======================== PAGE 2: SEO BLOG ======================== -->
-  <main id="page-blog" class="hidden">
-    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <!-- HERO SECTION -->
+  <section id="hero" class="relative hero-radial pt-14 pb-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       
-      <div class="space-y-4 text-center mb-12">
-        <span class="text-xs uppercase font-extrabold tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">
-          SEO Pedagogical Whitepaper &amp; Analysis
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 leading-tight">
-          Adaptive AI in Medical &amp; Engineering Entrances: Deconstructing the Science of NEET, CET &amp; JEE Ranks
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-semibold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand animate-ping"></span>
+          Kengeri’s First Autonomous AI Learning Architecture
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-slate-900 leading-[1.12]">
+          Crack <span class="text-brand italic">NEET, KCET & JEE</span> with Adaptive Cognitive AI
+          <span class="block text-xl sm:text-2xl font-sans font-normal text-slate-600 mt-2">125 Days Hands-On Workshops | 3 & 6 Months Cohorts</span>
         </h1>
-        <p class="text-sm text-slate-500">By NammaWeb AI Academic Research Division • Target Aspirants: Medical &amp; Engineering</p>
-      </div>
 
-      <div class="rounded-3xl overflow-hidden border border-slate-200 mb-12 shadow-sm">
-        <img 
-          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" 
-          alt="AI Pedagogical Analysis for NEET and JEE" 
-          class="w-full h-80 sm:h-96 object-cover"
-        />
-      </div>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Master high-yield problem sets using real-time machine learning telemetry. Designed specifically for Karnataka PU & CBSE students preparing for AIIMS, IITs, NITs, and premier Bangalore Engineering & Medical colleges.
+        </p>
 
-      <div class="space-y-8 text-slate-700 leading-relaxed text-base sm:text-lg">
-        <div>
-          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">1. The Critical Shift from Rote Learning to Machine Intelligence</h2>
-          <p>
-            Competitive examinations in India—namely <strong>NEET (Medical)</strong>, <strong>JEE (Engineering)</strong>, and <strong>CET</strong>—have reached unprecedented levels of student competition. Traditional classroom models present a single static speed for hundreds of students simultaneously. <strong>NammaWeb AI Learning Suite</strong> introduces cognitive-level personalization, recalculating each candidate's daily syllabus based on empirical error tracking.
-          </p>
+        <!-- 6-LINE SYSTEMATIC BREAKDOWN -->
+        <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm space-y-2 text-slate-700 text-xs sm:text-sm">
+          <p><strong class="text-brand">Line 1:</strong> Real-time neural error-mapping replaces passive lecturing with active memory consolidation.</p>
+          <p><strong class="text-brand">Line 2:</strong> NEET Medical syllabus covers line-by-line NCERT Biology, 3D bio-mechanics, and reaction kinetics.</p>
+          <p><strong class="text-brand">Line 3:</strong> KCET modules prioritize rapid formula deductions to crack 60 questions under 60-second ceilings.</p>
+          <p><strong class="text-brand">Line 4:</strong> JEE track isolates multi-variable calculus, quantum mechanics, and vector physics derivations.</p>
+          <p><strong class="text-brand">Line 5:</strong> Live predictive All-India Rank (AIR) metrics predict and eliminate retention decay before exam day.</p>
+          <p><strong class="text-brand">Line 6:</strong> On-site practical lab at Kengeri, Bengaluru guarantees individual mentorship from experienced exam coaches.</p>
         </div>
 
-        <div>
-          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">2. NEET (Medical) Precision Architecture (₹29,999)</h2>
-          <p>
-            Scoring 680+ in NEET demands total recall across 38 chapters of NCERT Biology. Our Medical AI pipeline scans student responses down to single taxonomic ambiguities, pinpointing whether an error stems from conceptual confusion or reading fatigue.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">3. JEE (Engineering) Problem-Solving Depth (₹25,999)</h2>
-          <p>
-            For JEE Main &amp; Advanced aspirants, rote memorization fails entirely. NammaWeb's algorithmic physics engine deconstructs multi-step problems into fundamental mechanics and calculus nodes, ensuring students understand the root structure of complex numerical problems.
-          </p>
-        </div>
-
-        <div>
-          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">4. CET Speed Acceleration &amp; Accuracy (₹39,999)</h2>
-          <p>
-            The Karnataka CET and state-level engineering/medical exams test raw velocity under high time pressure. The CET engine conditions candidates to identify high-probability shortcuts and solve problems within 45 seconds.
-          </p>
-        </div>
-
-        <div class="bg-brand-surface rounded-2xl p-8 border border-brand/20 text-center space-y-4 my-8">
-          <h3 class="text-2xl font-serif font-bold text-slate-900">Secure Your Medical or Engineering Rank</h3>
-          <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">Enroll today in NEET (₹29,999), CET (₹39,999), or JEE (₹25,999) and unlock the power of AI-driven test preparation.</p>
-          <button onclick="switchPage('home'); setTimeout(()=>{location.href='#booking'}, 100);" class="px-8 py-3.5 rounded-xl bg-brand text-white font-bold text-xs uppercase tracking-widest hover:bg-brand-dark transition-all">
-            Proceed to Booking &amp; Registration
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#enroll" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition shadow-lg shadow-brand/25">
+            Register via WhatsApp & UPI
+          </a>
+          <button onclick="toggleChatModal()" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-800 bg-white border border-slate-300 hover:border-brand transition shadow-sm">
+            Launch AI Exam Explainer Bot
           </button>
         </div>
       </div>
 
-    </article>
-  </main>
+      <!-- INTERACTIVE AI TELEMETRY SIMULATOR -->
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-2xl relative overflow-hidden">
+          <div class="flex justify-between items-center pb-4 border-b border-slate-100">
+            <div>
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand block">Live Diagnostic Node</span>
+              <h2 class="text-sm font-bold text-slate-900">Student Cognitive Diagnostic Telemetry</h2>
+            </div>
+            <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">Active ML Session</span>
+          </div>
 
-  <!-- ======================== FOOTER ======================== -->
-  <footer class="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800">
+          <div class="space-y-4 my-5 text-xs">
+            <div>
+              <div class="flex justify-between text-slate-600 mb-1 font-medium">
+                <span>Rotational Mechanics & Vector Integrals</span>
+                <span class="text-brand font-bold">92% Recall</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                <div class="bg-brand h-2 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-slate-600 mb-1 font-medium">
+                <span>Organic Chemical Synthesis & Isomerism</span>
+                <span class="text-amber-600 font-bold">68% Attention Alert</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                <div class="bg-amber-500 h-2 rounded-full" style="width: 68%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-slate-600 mb-1 font-medium">
+                <span>KCET 45-Sec Time Barrier Execution</span>
+                <span class="text-emerald-600 font-bold">98.4% On Schedule</span>
+              </div>
+              <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                <div class="bg-emerald-600 h-2 rounded-full" style="width: 98.4%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-brand-surface p-4 rounded-2xl border border-brand/20 flex items-center justify-between">
+            <div>
+              <div class="text-[11px] font-bold text-slate-800">Direct Helpline Assistance</div>
+              <div class="text-xs text-brand font-extrabold">+91 92415 27429</div>
+            </div>
+            <a href="tel:+919241527429" class="px-3.5 py-1.5 rounded-lg bg-brand text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-dark transition">Call Direct</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COURSES & STRUCTURE SECTION -->
+  <section id="workshops" class="py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col items-center justify-center text-center space-y-5 pb-12 border-b border-slate-800/80">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand block mb-2">Structure & Cohort Tracks</span>
+        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Choose Your Preparation Duration</h2>
+        <p class="text-slate-500 text-sm mt-3">From hands-on problem-solving workshops to deep semester-long AI rank acceleration cohorts.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- LOGO IN FOOTER -->
-        <div class="w-14 h-14 bg-white rounded-2xl p-1.5 flex items-center justify-center shadow-md overflow-hidden shrink-0">
-          <img 
-            src="./logo.jpg" 
-            alt="NammaWeb Logo" 
-            class="w-full h-full object-contain block"
-            loading="eager"
-            decoding="sync"
-          />
+        <!-- Track 1: 125 Days Workshops -->
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-brand hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold uppercase bg-brand/10 text-brand px-3 py-1 rounded-full">Hands-On Intensive</span>
+            <h3 class="text-2xl font-serif font-bold text-slate-900 mt-4">125 Days AI Workshops</h3>
+            <p class="text-xs text-slate-500 mt-2 mb-6">Daily question deconstructions, rapid doubt clearing, and predictive speed drills.</p>
+            
+            <div class="text-3xl font-extrabold text-slate-900 mb-6">125 Days <span class="text-xs font-normal text-slate-500">of daily diagnostic drills</span></div>
+
+            <ul class="space-y-3 text-xs text-slate-700 border-t border-slate-200/80 pt-6">
+              <li class="flex items-center gap-2">✓ 1,200+ Handpicked high-yield questions</li>
+              <li class="flex items-center gap-2">✓ AI-monitored error journal generation</li>
+              <li class="flex items-center gap-2">✓ Weekly Kengeri campus live simulations</li>
+              <li class="flex items-center gap-2">✓ KCET, NEET & JEE shortcut matrices</li>
+            </ul>
+          </div>
+
+          <button onclick="prefillForm('125 Days Workshop', 'KCET / NEET / JEE')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition">
+            Enroll 125-Day Batch
+          </button>
         </div>
 
-        <div class="space-y-1">
-          <span class="text-2xl font-extrabold tracking-tight text-white block">nammaweb</span>
-          <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold">AI Learning Suite for NEET / CET / JEE (Medical &amp; Engg)</span>
+        <!-- Track 2: 3 Months Accelerated (Popular) -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-brand relative shadow-xl flex flex-col justify-between">
+          <div class="absolute -top-3.5 right-8 bg-brand text-white px-3.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
+            High Velocity
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase bg-brand/10 text-brand px-3 py-1 rounded-full">Crash Accelerator</span>
+            <h3 class="text-2xl font-serif font-bold text-slate-900 mt-4">3 Months Course</h3>
+            <p class="text-xs text-slate-500 mt-2 mb-6">Designed for final-mile revision, test pacing strategies, and elimination tactics.</p>
+            
+            <div class="text-3xl font-extrabold text-brand mb-6">3 Months <span class="text-xs font-normal text-slate-500">intensive test preparation</span></div>
+
+            <ul class="space-y-3 text-xs text-slate-700 border-t border-slate-100 pt-6">
+              <li class="flex items-center gap-2">✓ 60 Complete simulated grand mocks</li>
+              <li class="flex items-center gap-2">✓ Negative marking suppression framework</li>
+              <li class="flex items-center gap-2">✓ NCERT Biology semantic speed reviews</li>
+              <li class="flex items-center gap-2">✓ 1-on-1 Mentor strategy sessions</li>
+            </ul>
+          </div>
+
+          <button onclick="prefillForm('3 Months Course', 'NEET / JEE / KCET')" class="w-full mt-8 py-3.5 rounded-xl bg-brand text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-dark transition shadow-md">
+            Enroll 3-Month Course
+          </button>
         </div>
 
-        <div class="pt-3 pb-1">
-          <p class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-1">helpline into nammaweb.com</p>
-          <a href="mailto:helpline@nammaweb.com" class="text-brand-light hover:text-white transition-colors text-base font-semibold">
-            info@nammaweb.com
-          </a>
-        </div>
+        <!-- Track 3: 6 Months Comprehensive -->
+        <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 hover:border-brand hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <span class="text-[10px] font-bold uppercase bg-slate-200 text-slate-700 px-3 py-1 rounded-full">Complete Mastery</span>
+            <h3 class="text-2xl font-serif font-bold text-slate-900 mt-4">6 Months Course</h3>
+            <p class="text-xs text-slate-500 mt-2 mb-6">Comprehensive curriculum mastery from basic foundations up to Advanced rank percentiles.</p>
+            
+            <div class="text-3xl font-extrabold text-slate-900 mb-6">6 Months <span class="text-xs font-normal text-slate-500">end-to-end syllabus cover</span></div>
 
-        <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400 pt-2">
-          <button onclick="switchPage('home')" class="hover:text-white transition-colors">Main Suite</button>
-          <a href="#gallery" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#gallery'},100);}" class="hover:text-white transition-colors">Curriculum Imagery</a>
-          <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="hover:text-white transition-colors">Pricing (NEET / CET / JEE)</a>
-          <button onclick="switchPage('blog')" class="hover:text-white transition-colors">SEO Insights Blog</button>
+            <ul class="space-y-3 text-xs text-slate-700 border-t border-slate-200/80 pt-6">
+              <li class="flex items-center gap-2">✓ Full Class 11 & 12 integrated coverage</li>
+              <li class="flex items-center gap-2">✓ Daily diagnostic telemetry checks</li>
+              <li class="flex items-center gap-2">✓ All-India benchmark mock ranking</li>
+              <li class="flex items-center gap-2">✓ Kengeri offline classroom support</li>
+            </ul>
+          </div>
+
+          <button onclick="prefillForm('6 Months Course', 'JEE / NEET / KCET Comprehensive')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition">
+            Enroll 6-Month Course
+          </button>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
+  <!-- KENGERI, BENGALURU LOCAL HUB & GEO SECTION -->
+  <section id="kengeri-campus" class="py-16 bg-slate-100 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div class="space-y-4">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand">Localized Excellence in West Bengaluru</span>
+        <h2 class="text-3xl font-serif font-bold text-slate-900">Accessible Learning Centre at Kengeri, Bengaluru</h2>
+        <p class="text-slate-600 text-sm leading-relaxed">
+          Conveniently connected to the Kengeri Metro Station and Mysore Road Expressway. Ideal for students from Kengeri Satellite Town, Rajarajeshwari Nagar (RR Nagar), Nagarbhavi, Bangalore University Campus, and Bidadi seeking cutting-edge AI coaching without long commutes.
+        </p>
+
+        <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm space-y-2 text-xs text-slate-700">
+          <div class="font-bold text-slate-900 flex items-center gap-2">
+            <span>📍</span> NammaWeb AI Learning Suite - Kengeri Centre
+          </div>
+          <div>Mysore Road, Near Kengeri Metro Station, Kengeri Satellite Town, Bengaluru, Karnataka 560060</div>
+          <div class="text-brand font-bold">Email: info@nammaweb.com | Phone: +91 92415 27429</div>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion for Voice Search & AEO -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+        <h3 class="text-lg font-serif font-bold text-slate-900 mb-2">Frequently Answered Questions (AEO & Voice Search)</h3>
+        
+        <details class="group border-b border-slate-100 pb-3" open>
+          <summary class="flex justify-between items-center font-bold text-xs cursor-pointer text-slate-800">
+            <span>How does NammaWeb's AI assist in NEET and JEE preparation?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Unlike static test series, our engine tracks cognitive latency and error patterns. If you take 90 seconds on a 45-second KCET question or stumble on Organic stereochemistry, the system adapts your daily syllabus to eliminate that weakness.
+          </p>
+        </details>
+
+        <details class="group border-b border-slate-100 pb-3">
+          <summary class="flex justify-between items-center font-bold text-xs cursor-pointer text-slate-800">
+            <span>Where is the physical coaching centre located in Kengeri?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            The facility is located right off Mysore Road near the Kengeri Metro Terminal, allowing easy access for students across West Bengaluru.
+          </p>
+        </details>
+
+        <details class="group">
+          <summary class="flex justify-between items-center font-bold text-xs cursor-pointer text-slate-800">
+            <span>Can I enroll in both 125-day workshops and regular courses?</span>
+            <span class="transition group-open:rotate-180">▾</span>
+          </summary>
+          <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+            Yes. The 125-day hands-on workshops run as specialized problem-solving blocks that integrate seamlessly with our 3-month and 6-month cohorts.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRATION FORM WITH DIRECT WHATSAPP GENERATOR & UPI -->
+  <section id="enroll" class="py-20 bg-brand-surface">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-[10px] uppercase font-extrabold tracking-widest text-brand bg-brand/10 px-3.5 py-1 rounded-full">Fast-Track Registration</span>
+          <h2 class="text-3xl font-serif font-bold text-slate-900 mt-3">Candidate Admission & WhatsApp Enrollment</h2>
+          <p class="text-xs text-slate-500 mt-1">Fill out the details below. It instantly prepares your personalized WhatsApp registration message and provides direct UPI payment details.</p>
+        </div>
+
+        <form id="registrationForm" onsubmit="handleRegistrationSubmit(event)" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Student Full Name *</label>
+              <input type="text" id="studentName" required placeholder="e.g., Rohan Kumar" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">WhatsApp Phone Number *</label>
+              <input type="tel" id="studentPhone" required placeholder="e.g., 9876543210" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address *</label>
+              <input type="email" id="studentEmail" required placeholder="e.g., info@nammaweb.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Target Examination *</label>
+              <select id="targetExam" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none font-medium">
+                <option value="NEET (Medical Entrance)">NEET (Medical Entrance)</option>
+                <option value="KCET (Karnataka State Entrance)">KCET (Karnataka State Entrance)</option>
+                <option value="JEE Main & Advanced">JEE Main & Advanced</option>
+                <option value="Dual Track (NEET + KCET)">Dual Track (NEET + KCET)</option>
+                <option value="Dual Track (JEE + KCET)">Dual Track (JEE + KCET)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Program & Duration Structure *</label>
+              <select id="programDuration" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none font-medium">
+                <option value="125 Days Hands-On Workshop">125 Days Hands-On Workshop</option>
+                <option value="3 Months Crash Accelerator">3 Months Crash Accelerator Course</option>
+                <option value="6 Months Comprehensive Rank Program">6 Months Comprehensive Rank Program</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Preferred Center Attendance *</label>
+              <select id="attendanceMode" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none font-medium">
+                <option value="Kengeri Campus Offline Sessions">Kengeri Campus Offline Sessions</option>
+                <option value="Digital Live AI Remote Portal">Digital Live AI Remote Portal</option>
+                <option value="Hybrid (Kengeri + Live Cloud)">Hybrid (Kengeri + Live Cloud)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- PAYMENT UPI & REGISTRATION CONFIRMATION -->
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-slate-900">Official UPI ID for Seat Booking:</span>
+              <span class="bg-white border border-slate-300 font-mono text-[11px] font-bold px-2 py-1 rounded text-brand">9241527429@upi</span>
+            </div>
+            <p class="text-slate-500">Scan or send token registration via any UPI app (GPay, PhonePe, Paytm). You will verify receipt directly on WhatsApp.</p>
+          </div>
+
+          <button type="submit" class="w-full py-4 rounded-xl text-white bg-emerald-600 hover:bg-emerald-700 font-bold text-xs uppercase tracking-widest transition shadow-lg shadow-emerald-700/20 flex items-center justify-center gap-2">
+            <span>💬</span>
+            <span>Send Details to Official WhatsApp (+91 92415 27429)</span>
+          </button>
+        </form>
+
+        <div id="formSuccessMessage" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-semibold text-center">
+          Opening WhatsApp with your pre-filled registration packet. If it doesn't open automatically, <a id="manualWaLink" href="#" target="_blank" class="underline font-bold">click here to send message</a>.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col items-center justify-center text-center space-y-4 pb-10 border-b border-slate-800">
+        
+        <div class="w-12 h-12 bg-white rounded-xl p-1.5 flex items-center justify-center shadow overflow-hidden">
+          <img src="./logo.jpg" alt="NammaWeb Logo" class="w-full h-full object-contain" />
+        </div>
+
+        <div>
+          <span class="text-2xl font-extrabold tracking-tight text-white block">nammaweb</span>
+          <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold">AI Learning Suite for NEET / KCET / JEE</span>
+        </div>
+
+        <div class="text-xs text-slate-300 max-w-lg space-y-1">
+          <p>Kengeri Satellite Town, Mysore Road, Bengaluru, Karnataka - 560060</p>
+          <p>Official Admissions Helpline: <a href="tel:+919241527429" class="text-brand-light font-bold hover:underline">+91 92415 27429</a></p>
+          <p>Academic Research & Enquiries: <a href="mailto:info@nammaweb.com" class="text-brand-light font-bold hover:underline">info@nammaweb.com</a></p>
+        </div>
+
+        <div class="flex gap-4 pt-2">
+          <a href="https://wa.me/919241527429" target="_blank" class="text-xs font-bold bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 px-3.5 py-1.5 rounded-full hover:bg-emerald-600 hover:text-white transition">WhatsApp Support</a>
+          <button onclick="toggleChatModal()" class="text-xs font-bold bg-brand/30 text-brand-light border border-brand/40 px-3.5 py-1.5 rounded-full hover:bg-brand hover:text-white transition">Launch AI Assistant</button>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3 text-center sm:text-left">
         <p>© 2026 NammaWeb AI Learning Suite. All Rights Reserved.</p>
-        <p>Engineered for high conversion &amp; rank achievement.</p>
+        <p>SEO, GEO & AEO Optimized for Kengeri & Bengaluru Aspirants.</p>
       </div>
 
     </div>
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- ========================================================================= -->
+  <!-- FRONT-END INTERACTIVE AI COMPETITIVE EXAM BOT MODAL                       -->
+  <!-- ========================================================================= -->
+  <div id="aiChatModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 w-full max-w-lg overflow-hidden flex flex-col h-[580px] animate-float">
+      
+      <!-- Bot Header -->
+      <div class="bg-brand text-white p-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-lg">🤖</div>
+          <div>
+            <h3 class="font-bold text-sm">NammaWeb Exam AI Advisor</h3>
+            <p class="text-[10px] text-slate-200">Interactive Cognitive Query Engine</p>
+          </div>
+        </div>
+        <button onclick="toggleChatModal()" class="text-white/80 hover:text-white text-xl font-bold p-1">&times;</button>
+      </div>
+
+      <!-- Quick Suggestion Pills -->
+      <div class="bg-slate-50 p-2.5 border-b border-slate-100 flex gap-1.5 overflow-x-auto text-[11px] whitespace-nowrap">
+        <button onclick="sendQuickPrompt('What is the 125-day workshop structure?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:border-brand text-slate-700">125-Day Workshop</button>
+        <button onclick="sendQuickPrompt('How does AI predict my NEET rank?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:border-brand text-slate-700">NEET AI Diagnostic</button>
+        <button onclick="sendQuickPrompt('KCET 45-second trick mastery?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:border-brand text-slate-700">KCET Speed</button>
+        <button onclick="sendQuickPrompt('Where is Kengeri campus?')" class="px-2.5 py-1 rounded-full bg-white border border-slate-200 hover:border-brand text-slate-700">Kengeri Location</button>
+      </div>
+
+      <!-- Chat History Stream -->
+      <div id="chatMessages" class="flex-1 p-4 overflow-y-auto space-y-3 custom-scrollbar text-xs">
+        <div class="flex gap-2">
+          <div class="w-7 h-7 rounded-full bg-brand/10 text-brand flex items-center justify-center shrink-0 text-xs">🤖</div>
+          <div class="bg-slate-100 rounded-2xl p-3 text-slate-800 max-w-[85%]">
+            Namaskara! I am the NammaWeb AI Academic Bot. Ask me anything about our 125-Day hands-on workshops, 3 & 6-month cohorts, KCET speed matrices, or NEET/JEE adaptive error tracking!
+          </div>
+        </div>
+      </div>
+
+      <!-- Bot Input Area -->
+      <form onsubmit="handleChatSubmit(event)" class="p-3 border-t border-slate-200 bg-white flex gap-2">
+        <input type="text" id="chatInput" placeholder="Ask about syllabus, Kengeri batches, fees..." class="flex-1 px-4 py-2.5 rounded-xl border border-slate-200 text-xs focus:outline-none focus:border-brand" />
+        <button type="submit" class="px-4 py-2.5 bg-brand text-white rounded-xl font-bold text-xs hover:bg-brand-dark transition">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FLOATING ACTION BUTTON FOR DIRECT WHATSAPP -->
+  <a href="https://wa.me/919241527429?text=Hi%20NammaWeb,%20I%20am%20interested%20in%20the%20NEET/KCET/JEE%20coaching%20in%20Kengeri." target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110">
+    <span class="text-2xl">💬</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT CONTROLLERS (FORM, WHATSAPP GENERATOR & FRONT-END AI BOT)       -->
+  <!-- ========================================================================= -->
   <script>
-    let currentPage = 'home';
-
-    function switchPage(page) {
-      currentPage = page;
-      const homeSection = document.getElementById('page-home');
-      const blogSection = document.getElementById('page-blog');
-      const navHome = document.getElementById('nav-btn-home');
-      const navBlog = document.getElementById('nav-btn-blog');
-      const mobHome = document.getElementById('mob-btn-home');
-      const mobBlog = document.getElementById('mob-btn-blog');
-
-      if (page === 'home') {
-        homeSection.classList.remove('hidden');
-        homeSection.classList.add('block');
-        blogSection.classList.add('hidden');
-        blogSection.classList.remove('block');
-
-        navHome.classList.add('text-brand');
-        navBlog.classList.remove('text-brand');
-        mobHome.classList.add('text-brand');
-        mobBlog.classList.remove('text-brand');
-      } else {
-        homeSection.classList.add('hidden');
-        homeSection.classList.remove('block');
-        blogSection.classList.remove('hidden');
-        blogSection.classList.add('block');
-
-        navHome.classList.remove('text-brand');
-        navBlog.classList.add('text-brand');
-        mobHome.classList.remove('text-brand');
-        mobBlog.classList.add('text-brand');
+    // Prefill form from cards
+    function prefillForm(duration, exam) {
+      document.getElementById('programDuration').value = duration;
+      const targetSelect = document.getElementById('targetExam');
+      for (let i = 0; i < targetSelect.options.length; i++) {
+        if (targetSelect.options[i].value.includes(exam.split(' ')[0])) {
+          targetSelect.selectedIndex = i;
+          break;
+        }
       }
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' });
     }
 
-    function selectCourse(name, price) {
-      if (currentPage !== 'home') {
-        switchPage('home');
-      }
-      const input = document.getElementById('bookingCourseInput');
-      input.value = `${name} - ${price}`;
-      document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
-    }
-
-    function handleBooking(e) {
+    // Direct WhatsApp Message Formatter & Dispatcher
+    function handleRegistrationSubmit(e) {
       e.preventDefault();
-      const course = document.getElementById('bookingCourseInput').value;
-      const alertBox = document.getElementById('booking-alert');
-      alertBox.textContent = `Success! Admission request recorded for ${course}. Our team has sent the syllabus and payment verification details to your email and WhatsApp helpline.`;
-      alertBox.classList.remove('hidden');
+      const name = document.getElementById('studentName').value.trim();
+      const phone = document.getElementById('studentPhone').value.trim();
+      const email = document.getElementById('studentEmail').value.trim();
+      const exam = document.getElementById('targetExam').value;
+      const program = document.getElementById('programDuration').value;
+      const mode = document.getElementById('attendanceMode').value;
+
+      const messageText = `*New Admission Request - NammaWeb AI Suite (Kengeri)*%0A%0A` +
+        `👤 *Student Name:* ${encodeURIComponent(name)}%0A` +
+        `📞 *Phone:* ${encodeURIComponent(phone)}%0A` +
+        `✉️ *Email:* ${encodeURIComponent(email)}%0A` +
+        `🎯 *Target Exam:* ${encodeURIComponent(exam)}%0A` +
+        `⏳ *Duration/Track:* ${encodeURIComponent(program)}%0A` +
+        `📍 *Mode:* ${encodeURIComponent(mode)}%0A%0A` +
+        `💳 *UPI Ref:* 9241527429@upi%0A` +
+        `Please confirm my batch reservation and send syllabus outline.`;
+
+      const whatsappUrl = `https://wa.me/919241527429?text=${messageText}`;
+
+      document.getElementById('manualWaLink').href = whatsappUrl;
+      document.getElementById('formSuccessMessage').classList.remove('hidden');
+
+      // Direct redirection
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Modal Visibility Handler
+    function toggleChatModal() {
+      const modal = document.getElementById('aiChatModal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        document.getElementById('chatInput').focus();
+      }
+    }
+
+    // Front-End AI Exam Bot Knowledge Base & Inference Emulator
+    function sendQuickPrompt(promptText) {
+      document.getElementById('chatInput').value = promptText;
+      handleChatSubmit(new Event('submit'));
+    }
+
+    function handleChatSubmit(e) {
+      e.preventDefault();
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      if (!message) return;
+
+      const chatMessages = document.getElementById('chatMessages');
+
+      // Render user message
+      const userBubble = document.createElement('div');
+      userBubble.className = "flex justify-end";
+      userBubble.innerHTML = `<div class="bg-brand text-white rounded-2xl p-3 max-w-[85%]">${escapeHtml(message)}</div>`;
+      chatMessages.appendChild(userBubble);
+      input.value = '';
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      // Generate AI Bot response
+      setTimeout(() => {
+        const botResponse = generateBotResponse(message.toLowerCase());
+        const botBubble = document.createElement('div');
+        botBubble.className = "flex gap-2";
+        botBubble.innerHTML = `
+          <div class="w-7 h-7 rounded-full bg-brand/10 text-brand flex items-center justify-center shrink-0 text-xs">🤖</div>
+          <div class="bg-slate-100 rounded-2xl p-3 text-slate-800 max-w-[85%]">${botResponse}</div>
+        `;
+        chatMessages.appendChild(botBubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 400);
+    }
+
+    function generateBotResponse(q) {
+      if (q.includes('125') || q.includes('workshop')) {
+        return "Our **125-Day Hands-On Workshop** focuses on active tactical execution. Students solve 1,200+ selected pattern questions with our AI telemetry catching retention gaps, calculation velocity, and conceptual missteps.";
+      } else if (q.includes('neet')) {
+        return "For **NEET Medical Aspirants**, our AI engine enforces NCERT line-by-line taxonomy recall, daily 180-question speed endurance drills, and diagnostic elimination of negative marking habits.";
+      } else if (q.includes('cet') || q.includes('kcet')) {
+        return "The **KCET Program** is optimized for speed. Our AI trains you to complete complex calculations within 45 to 60 seconds per question using algebraic shortcuts and graphical deductions.";
+      } else if (q.includes('jee')) {
+        return "The **JEE Track** emphasizes multi-variable calculus, quantum states, and rotational kinematics through deep algorithmic derivation trees.";
+      } else if (q.includes('kengeri') || q.includes('location') || q.includes('address') || q.includes('where')) {
+        return "We are based on **Mysore Road near Kengeri Metro Station, Kengeri Satellite Town, Bengaluru 560060**. Metro connectivity makes it effortless for students across West Bangalore.";
+      } else if (q.includes('fee') || q.includes('price') || q.includes('cost') || q.includes('upi')) {
+        return "You can enroll directly via UPI to **9241527429@upi** or WhatsApp us at **+91 92415 27429** to receive customized fee breakups for 125-day, 3-month, or 6-month programs.";
+      } else {
+        return "Our AI Learning Suite is calibrated for Karnataka PU and CBSE aspirants aiming for top percentiles in NEET, KCET, and JEE. Would you like to join the 125-day workshop, 3-month crash batch, or 6-month cohort at our Kengeri campus?";
+      }
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/[&<>"']/g, function(m) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+      });
     }
   </script>
 
