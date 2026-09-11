@@ -36,18 +36,6 @@
   </script>
 
   <style>
-    .brand-svg-stroke {
-      stroke: #005B5C;
-      stroke-width: 14;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-    .footer-brand-svg-stroke {
-      stroke: #07797B;
-      stroke-width: 14;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
     .glass-nav {
       background: rgba(255, 255, 255, 0.90);
       backdrop-filter: blur(16px);
@@ -61,21 +49,14 @@
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand selection:text-white">
 
-  <!-- NAVIGATION -->
+  <!-- ======================== NAVIGATION ======================== -->
   <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
-      <!-- LOGO -->
+      <!-- LOGO NEAR NAMMAWEB -->
       <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-3.5 group">
-        <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
-          <!-- Geometric Infinity Knot SVG matching brand asset -->
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full brand-svg-stroke">
-            <path d="M 68 36 L 96 64" />
-            <path d="M 96 64 L 68 92 L 36 60 L 68 28 L 96 56" />
-            <path d="M 132 164 L 104 136" />
-            <path d="M 104 136 L 132 108 L 164 140 L 132 172 L 104 144" />
-            <path d="M 36 88 L 68 120 L 140 48 L 164 72 L 60 176 L 36 152 L 56 132" />
-          </svg>
+        <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105 flex items-center justify-center">
+          <img src="logo.jpg" alt="NammaWeb Logo" class="w-full h-full object-contain rounded-md" />
         </div>
         <div class="flex flex-col">
           <span class="font-extrabold text-xl tracking-tight text-slate-900 leading-none">nammaweb</span>
@@ -107,7 +88,7 @@
     </div>
   </header>
 
-  <!-- PAGE 1: HOME & BOOKING -->
+  <!-- ======================== PAGE 1: HOME & BOOKING ======================== -->
   <main id="page-home" class="block">
     
     <!-- HERO SECTION -->
@@ -125,6 +106,7 @@
             <span class="block text-xl sm:text-2xl font-sans font-normal text-slate-500 mt-2">(Medical &amp; Engg)</span>
           </h1>
 
+          <!-- 6 LINE SPECIFICATION -->
           <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm space-y-2.5 text-slate-700 text-sm sm:text-base leading-relaxed">
             <p class="font-semibold text-brand text-xs uppercase tracking-wider mb-1">Pedagogical Blueprint (NEET / CET / JEE):</p>
             <p><span class="font-bold text-slate-900">Line 1:</span> NammaWeb AI Learning Suite unifies real-time cognitive analytics with premier test-taking methodologies.</p>
@@ -145,7 +127,7 @@
           </div>
         </div>
 
-        <!-- SIMULATOR PREVIEW -->
+        <!-- HERO RIGHT -->
         <div class="lg:col-span-5">
           <div class="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-xl space-y-4">
             <div class="relative rounded-2xl overflow-hidden h-64 bg-slate-100">
@@ -173,7 +155,7 @@
       </div>
     </section>
 
-    <!-- 4 PHOTO GALLERY SECTION -->
+    <!-- ======================== 4 PHOTO SECTION ======================== -->
     <section id="gallery" class="py-20 bg-white border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mb-14">
@@ -184,7 +166,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Image 1: NEET -->
+          <!-- Image 1: NEET (Medical) -->
           <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="h-60 overflow-hidden relative">
               <img 
@@ -202,7 +184,7 @@
             </div>
           </div>
 
-          <!-- Image 2: JEE -->
+          <!-- Image 2: JEE (Engineering) -->
           <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div class="h-60 overflow-hidden relative">
               <img 
@@ -260,7 +242,7 @@
       </div>
     </section>
 
-    <!-- BOOKING & PRICING SECTION -->
+    <!-- ======================== BOOKING & INDIAN PRICING SECTION ======================== -->
     <section id="booking" class="py-24 bg-brand-surface border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -272,7 +254,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           
-          <!-- JEE -->
+          <!-- JEE: ₹25,999 -->
           <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
             <div>
               <div class="flex justify-between items-center mb-4">
@@ -300,7 +282,7 @@
             </button>
           </div>
 
-          <!-- NEET -->
+          <!-- NEET: ₹29,999 -->
           <div class="bg-white rounded-3xl p-8 border-2 border-brand relative flex flex-col justify-between shadow-xl ring-4 ring-brand/5">
             <div class="absolute -top-3.5 right-8 bg-brand text-white px-3.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
               Most Popular
@@ -331,7 +313,7 @@
             </button>
           </div>
 
-          <!-- CET -->
+          <!-- CET: ₹39,999 -->
           <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
             <div>
               <div class="flex justify-between items-center mb-4">
@@ -403,7 +385,7 @@
 
   </main>
 
-  <!-- PAGE 2: SEO BLOG -->
+  <!-- ======================== PAGE 2: SEO BLOG ======================== -->
   <main id="page-blog" class="hidden">
     <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       
@@ -466,21 +448,15 @@
     </article>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ======================== FOOTER ======================== -->
   <footer class="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="flex flex-col items-center justify-center text-center space-y-5 pb-12 border-b border-slate-800/80">
         
-        <!-- EXACT BRAND LOGO IN FOOTER -->
-        <div class="w-14 h-14">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full footer-brand-svg-stroke">
-            <path d="M 68 36 L 96 64" />
-            <path d="M 96 64 L 68 92 L 36 60 L 68 28 L 96 56" />
-            <path d="M 132 164 L 104 136" />
-            <path d="M 104 136 L 132 108 L 164 140 L 132 172 L 104 144" />
-            <path d="M 36 88 L 68 120 L 140 48 L 164 72 L 60 176 L 36 152 L 56 132" />
-          </svg>
+        <!-- LOGO IN FOOTER -->
+        <div class="w-14 h-14 bg-white rounded-xl p-2 flex items-center justify-center shadow">
+          <img src="logo.jpg" alt="NammaWeb Logo" class="w-full h-full object-contain" />
         </div>
 
         <div class="space-y-1">
@@ -512,6 +488,7 @@
     </div>
   </footer>
 
+  <!-- SCRIPT -->
   <script>
     let currentPage = 'home';
 
@@ -553,7 +530,7 @@
         switchPage('home');
       }
       const input = document.getElementById('bookingCourseInput');
-      input.value = `${name} -${price}`;
+      input.value = `${name} - ${price}`;
       document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
     }
 
