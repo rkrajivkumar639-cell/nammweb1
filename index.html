@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NammaWeb AI Learning Suite | AI for NEET, CET & JEE (Medical & Engg)</title>
+  <meta name="description" content="AI-powered diagnostic and learning suite for NEET (Medical), CET, and JEE (Engineering). Master high-yield concepts with adaptive intelligence." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#005B5C',
+              dark: '#003F40',
+              light: '#07797B',
+              surface: '#F4F9F9',
+              gold: '#D4AF37'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .brand-svg-stroke {
+      stroke: #005B5C;
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .footer-brand-svg-stroke {
+      stroke: #07797B;
+      stroke-width: 14;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.90);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .hero-radial {
+      background: radial-gradient(circle at 15% 20%, rgba(0, 91, 92, 0.07) 0%, transparent 45%),
+                  radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 45%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-brand selection:text-white">
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO -->
+      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center gap-3.5 group">
+        <div class="w-10 h-10 transition-transform duration-300 group-hover:scale-105">
+          <!-- Geometric Infinity Knot SVG matching brand asset -->
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full brand-svg-stroke">
+            <path d="M 68 36 L 96 64" />
+            <path d="M 96 64 L 68 92 L 36 60 L 68 28 L 96 56" />
+            <path d="M 132 164 L 104 136" />
+            <path d="M 104 136 L 132 108 L 164 140 L 132 172 L 104 144" />
+            <path d="M 36 88 L 68 120 L 140 48 L 164 72 L 60 176 L 36 152 L 56 132" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-xl tracking-tight text-slate-900 leading-none">nammaweb</span>
+          <span class="text-[9px] uppercase font-bold tracking-widest text-brand mt-1">AI Learning Suite</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAV -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-slate-600">
+        <button onclick="switchPage('home')" id="nav-btn-home" class="transition-colors hover:text-brand text-brand">Main Suite</button>
+        <a href="#gallery" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#gallery'},100);}" class="transition-colors hover:text-brand">Curriculum Imagery</a>
+        <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="transition-colors hover:text-brand">Booking & Tiers</a>
+        <button onclick="switchPage('blog')" id="nav-btn-blog" class="transition-colors hover:text-brand">SEO Insights Blog</button>
+      </nav>
+
+      <!-- CTA BUTTON -->
+      <div class="flex items-center gap-3">
+        <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-200 shadow-sm hover:shadow-brand/25">
+          Enroll Now
+        </a>
+      </div>
+    </div>
+
+    <!-- MOBILE SUB-BAR -->
+    <div class="md:hidden flex border-t border-slate-200 bg-white px-4 py-2 justify-around text-[11px] font-bold uppercase tracking-wider text-slate-600">
+      <button onclick="switchPage('home')" id="mob-btn-home" class="text-brand">Main Suite</button>
+      <button onclick="switchPage('blog')" id="mob-btn-blog" class="text-slate-600">SEO Blog</button>
+      <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="text-brand font-extrabold">Book Seat</a>
+    </div>
+  </header>
+
+  <!-- PAGE 1: HOME & BOOKING -->
+  <main id="page-home" class="block">
+    
+    <!-- HERO SECTION -->
+    <section class="relative hero-radial pt-14 pb-20 border-b border-slate-200/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-semibold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+            AI-Engineered Cognitive Learning Architecture
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-slate-900 leading-[1.14]">
+            nammaweb <span class="text-brand italic">ai learning suite</span> for neet / cet / jee
+            <span class="block text-xl sm:text-2xl font-sans font-normal text-slate-500 mt-2">(Medical &amp; Engg)</span>
+          </h1>
+
+          <div class="rounded-2xl bg-white p-6 border border-slate-200 shadow-sm space-y-2.5 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <p class="font-semibold text-brand text-xs uppercase tracking-wider mb-1">Pedagogical Blueprint (NEET / CET / JEE):</p>
+            <p><span class="font-bold text-slate-900">Line 1:</span> NammaWeb AI Learning Suite unifies real-time cognitive analytics with premier test-taking methodologies.</p>
+            <p><span class="font-bold text-slate-900">Line 2:</span> NEET Medical modules focus rigorously on NCERT taxonomy mastery, human anatomy, and reaction energetics.</p>
+            <p><span class="font-bold text-slate-900">Line 3:</span> CET programs specialize in rapid-fire formula deduction, eliminating bottlenecks within 60-second time thresholds.</p>
+            <p><span class="font-bold text-slate-900">Line 4:</span> JEE Engineering modules deconstruct advanced rotational mechanics, multi-variable calculus, and modern physics.</p>
+            <p><span class="font-bold text-slate-900">Line 5:</span> Our diagnostic machine learning engine preemptively catches student retention decay prior to national mock exams.</p>
+            <p><span class="font-bold text-slate-900">Line 6:</span> Delivering precision performance, verified All-India percentile rank escalations, and unshakeable confidence.</p>
+          </div>
+
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#booking" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-white bg-brand hover:bg-brand-dark transition-all duration-300 shadow-lg shadow-brand/20">
+              Explore Seats &amp; Indian Pricing
+            </a>
+            <button onclick="switchPage('blog')" class="px-8 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-slate-800 bg-white border border-slate-300 hover:border-brand transition-all shadow-sm">
+              Read SEO Pedagogical Article
+            </button>
+          </div>
+        </div>
+
+        <!-- SIMULATOR PREVIEW -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-3xl p-5 border border-slate-200/90 shadow-xl space-y-4">
+            <div class="relative rounded-2xl overflow-hidden h-64 bg-slate-100">
+              <img 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80" 
+                alt="NEET Clinical Medical Lab Simulator" 
+                class="w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+              <span class="absolute bottom-3 left-4 text-xs font-bold uppercase tracking-wider text-white bg-brand/90 px-3 py-1 rounded-md">
+                Live Cognitive Telemetry
+              </span>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs">
+                <span class="font-bold text-brand uppercase tracking-wider">Predictive AI Suite</span>
+                <span class="text-emerald-600 font-semibold">● 99.4% Model Confidence</span>
+              </div>
+              <h3 class="font-serif text-lg font-bold text-slate-900">Autonomous Diagnostic Accuracy</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Cross-mapping question trends across 20+ years of NEET, Karnataka CET, and JEE Main/Advanced examinations with deep neural networks.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4 PHOTO GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-white border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs uppercase font-bold tracking-widest text-brand block mb-2">Curriculum Visual Assets</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">NEET / CET / JEE (Medical &amp; Engg) Image Gallery</h2>
+          <p class="text-slate-500 text-sm mt-2">Explore the integrated environments powering our medical and engineering test architectures.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Image 1: NEET -->
+          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-60 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80" 
+                alt="NEET Medical Clinical Biology" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 bg-emerald-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                NEET Medical
+              </span>
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-bold text-sm text-slate-900">Clinical Biology &amp; Anatomy</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">NCERT-aligned semantic parsing with 3D anatomical modeling for NEET aspirants.</p>
+            </div>
+          </div>
+
+          <!-- Image 2: JEE -->
+          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-60 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80" 
+                alt="JEE Advanced Engineering Applied Physics" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 bg-blue-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                JEE Engineering
+              </span>
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-bold text-sm text-slate-900">Advanced Applied Mechanics</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Deep vector calculus and quantum state question synthesizers designed for IIT-JEE ranks.</p>
+            </div>
+          </div>
+
+          <!-- Image 3: CET -->
+          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-60 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80" 
+                alt="CET Speed Examination Strategy" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 bg-amber-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                CET Engine
+              </span>
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-bold text-sm text-slate-900">Rapid Calculation Benchmarks</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">High-tempo cognitive execution modules guaranteeing maximum velocity in CET tests.</p>
+            </div>
+          </div>
+
+          <!-- Image 4: Unified Chemistry -->
+          <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+            <div class="h-60 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?auto=format&fit=crop&w=800&q=80" 
+                alt="Unified Chemistry Lab Medical & Engg" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <span class="absolute top-3 left-3 bg-indigo-700 text-white text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded shadow">
+                Unified Core
+              </span>
+            </div>
+            <div class="p-5 space-y-1.5">
+              <h3 class="font-bold text-sm text-slate-900">Organic Reaction Simulation</h3>
+              <p class="text-xs text-slate-500 leading-relaxed">Mechanism forecasting and molecular resonance engines common to Medical &amp; Engg.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING & PRICING SECTION -->
+    <section id="booking" class="py-24 bg-brand-surface border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase font-bold tracking-widest text-brand block mb-2">Admissions &amp; Transparent Indian Pricing</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900">Select Your Examination Track</h2>
+          <p class="text-slate-500 text-sm mt-3">Guaranteed seat allocations with instant access to the complete NammaWeb AI algorithm suite.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- JEE -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">Engineering Track</span>
+                <span class="text-[10px] font-bold uppercase bg-slate-100 text-slate-600 px-3 py-0.5 rounded-full">Core</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-slate-900">JEE Suite</h3>
+              <p class="text-xs text-slate-500 mt-2 mb-6">Engineered exclusively for JEE Main &amp; Advanced aspirants seeking IIT/NIT admissions.</p>
+              
+              <div class="mb-6">
+                <div class="text-4xl font-extrabold text-slate-900">₹25,999</div>
+                <div class="text-xs text-slate-400 mt-1">Complete Annual Enrollment • All Modules</div>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6">
+                <li class="flex items-center gap-2">✓ Advanced Mathematics &amp; Physics AI engines</li>
+                <li class="flex items-center gap-2">✓ 15,000+ JEE Advanced level simulated items</li>
+                <li class="flex items-center gap-2">✓ Real-time multi-step derivation checkers</li>
+                <li class="flex items-center gap-2">✓ AIR benchmark percentile forecasting</li>
+              </ul>
+            </div>
+
+            <button onclick="selectCourse('JEE (Engineering)', '₹25,999')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition-colors">
+              Book JEE (₹25,999)
+            </button>
+          </div>
+
+          <!-- NEET -->
+          <div class="bg-white rounded-3xl p-8 border-2 border-brand relative flex flex-col justify-between shadow-xl ring-4 ring-brand/5">
+            <div class="absolute -top-3.5 right-8 bg-brand text-white px-3.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-widest shadow-sm">
+              Most Popular
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-brand">Medical Track</span>
+                <span class="text-[10px] font-bold uppercase bg-brand/10 text-brand px-3 py-0.5 rounded-full">Flagship</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-slate-900">NEET Suite</h3>
+              <p class="text-xs text-slate-500 mt-2 mb-6">Designed for ambitious medical candidates aiming for AIIMS and top government medical colleges.</p>
+              
+              <div class="mb-6">
+                <div class="text-4xl font-extrabold text-brand">₹29,999</div>
+                <div class="text-xs text-slate-400 mt-1">Complete Annual Enrollment • Medical Focus</div>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-700 border-t border-slate-100 pt-6 font-medium">
+                <li class="flex items-center gap-2">✓ Complete NCERT Line-by-Line AI memory bank</li>
+                <li class="flex items-center gap-2">✓ Botany &amp; Zoology diagrammatic flash diagnostics</li>
+                <li class="flex items-center gap-2">✓ Daily 180-Question timed speed drills</li>
+                <li class="flex items-center gap-2">✓ Negative marking elimination framework</li>
+              </ul>
+            </div>
+
+            <button onclick="selectCourse('NEET (Medical)', '₹29,999')" class="w-full mt-8 py-3.5 rounded-xl bg-brand text-white font-bold text-xs uppercase tracking-wider hover:bg-brand-dark transition-colors shadow-md">
+              Book NEET (₹29,999)
+            </button>
+          </div>
+
+          <!-- CET -->
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 flex flex-col justify-between hover:border-brand transition-all shadow-sm">
+            <div>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">State Level Entrance</span>
+                <span class="text-[10px] font-bold uppercase bg-slate-100 text-slate-600 px-3 py-0.5 rounded-full">Intensive</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-slate-900">CET Suite</h3>
+              <p class="text-xs text-slate-500 mt-2 mb-6">State-level elite ranking preparation covering both Engineering &amp; Allied Medical sciences.</p>
+              
+              <div class="mb-6">
+                <div class="text-4xl font-extrabold text-slate-900">₹39,999</div>
+                <div class="text-xs text-slate-400 mt-1">Dual Engineering + Medical State Comprehensive</div>
+              </div>
+
+              <ul class="space-y-3 text-xs text-slate-600 border-t border-slate-100 pt-6">
+                <li class="flex items-center gap-2">✓ State syllabus + PUC integration matrix</li>
+                <li class="flex items-center gap-2">✓ Sub-45-second question tackling strategies</li>
+                <li class="flex items-center gap-2">✓ 25 Full-length CET diagnostic mock exams</li>
+                <li class="flex items-center gap-2">✓ Dedicated senior academic counselor helpline</li>
+              </ul>
+            </div>
+
+            <button onclick="selectCourse('CET (State Entrance)', '₹39,999')" class="w-full mt-8 py-3.5 rounded-xl border-2 border-brand text-brand font-bold text-xs uppercase tracking-wider hover:bg-brand hover:text-white transition-colors">
+              Book CET (₹39,999)
+            </button>
+          </div>
+
+        </div>
+
+        <!-- FORM -->
+        <div id="booking-section" class="mt-16 bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 max-w-2xl mx-auto shadow-md">
+          <div class="text-center mb-8">
+            <span class="text-[10px] uppercase font-bold tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">Fast-Track Registration</span>
+            <h3 class="text-2xl font-serif font-bold text-slate-900 mt-3">Reserve Candidate Admission</h3>
+            <p class="text-xs text-slate-500 mt-1">Immediate verification and syllabus activation via our academic portal.</p>
+          </div>
+
+          <form onsubmit="handleBooking(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Selected Program &amp; Tuition Fee</label>
+              <input type="text" id="bookingCourseInput" value="NEET (Medical) - ₹29,999" readonly class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none" />
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Student / Parent Name</label>
+                <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone / WhatsApp Number</label>
+                <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address</label>
+              <input type="email" required placeholder="applicant@nammaweb.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm focus:border-brand focus:outline-none" />
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl text-white bg-brand hover:bg-brand-dark font-bold text-xs uppercase tracking-widest transition-all shadow-md mt-4">
+              Confirm &amp; Proceed to Enrollment
+            </button>
+          </form>
+          <div id="booking-alert" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs font-semibold text-center"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- PAGE 2: SEO BLOG -->
+  <main id="page-blog" class="hidden">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      
+      <div class="space-y-4 text-center mb-12">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">
+          SEO Pedagogical Whitepaper &amp; Analysis
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900 leading-tight">
+          Adaptive AI in Medical &amp; Engineering Entrances: Deconstructing the Science of NEET, CET &amp; JEE Ranks
+        </h1>
+        <p class="text-sm text-slate-500">By NammaWeb AI Academic Research Division • Target Aspirants: Medical &amp; Engineering</p>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden border border-slate-200 mb-12 shadow-sm">
+        <img 
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" 
+          alt="AI Pedagogical Analysis for NEET and JEE" 
+          class="w-full h-80 sm:h-96 object-cover"
+        />
+      </div>
+
+      <div class="space-y-8 text-slate-700 leading-relaxed text-base sm:text-lg">
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">1. The Critical Shift from Rote Learning to Machine Intelligence</h2>
+          <p>
+            Competitive examinations in India—namely <strong>NEET (Medical)</strong>, <strong>JEE (Engineering)</strong>, and <strong>CET</strong>—have reached unprecedented levels of student competition. Traditional classroom models present a single static speed for hundreds of students simultaneously. <strong>NammaWeb AI Learning Suite</strong> introduces cognitive-level personalization, recalculating each candidate's daily syllabus based on empirical error tracking.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">2. NEET (Medical) Precision Architecture (₹29,999)</h2>
+          <p>
+            Scoring 680+ in NEET demands total recall across 38 chapters of NCERT Biology. Our Medical AI pipeline scans student responses down to single taxonomic ambiguities, pinpointing whether an error stems from conceptual confusion or reading fatigue.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">3. JEE (Engineering) Problem-Solving Depth (₹25,999)</h2>
+          <p>
+            For JEE Main &amp; Advanced aspirants, rote memorization fails entirely. NammaWeb's algorithmic physics engine deconstructs multi-step problems into fundamental mechanics and calculus nodes, ensuring students understand the root structure of complex numerical problems.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-serif font-bold text-slate-900 mb-3">4. CET Speed Acceleration &amp; Accuracy (₹39,999)</h2>
+          <p>
+            The Karnataka CET and state-level engineering/medical exams test raw velocity under high time pressure. The CET engine conditions candidates to identify high-probability shortcuts and solve problems within 45 seconds.
+          </p>
+        </div>
+
+        <div class="bg-brand-surface rounded-2xl p-8 border border-brand/20 text-center space-y-4 my-8">
+          <h3 class="text-2xl font-serif font-bold text-slate-900">Secure Your Medical or Engineering Rank</h3>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">Enroll today in NEET (₹29,999), CET (₹39,999), or JEE (₹25,999) and unlock the power of AI-driven test preparation.</p>
+          <button onclick="switchPage('home'); setTimeout(()=>{location.href='#booking'}, 100);" class="px-8 py-3.5 rounded-xl bg-brand text-white font-bold text-xs uppercase tracking-widest hover:bg-brand-dark transition-all">
+            Proceed to Booking &amp; Registration
+          </button>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-white pt-20 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col items-center justify-center text-center space-y-5 pb-12 border-b border-slate-800/80">
+        
+        <!-- EXACT BRAND LOGO IN FOOTER -->
+        <div class="w-14 h-14">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full footer-brand-svg-stroke">
+            <path d="M 68 36 L 96 64" />
+            <path d="M 96 64 L 68 92 L 36 60 L 68 28 L 96 56" />
+            <path d="M 132 164 L 104 136" />
+            <path d="M 104 136 L 132 108 L 164 140 L 132 172 L 104 144" />
+            <path d="M 36 88 L 68 120 L 140 48 L 164 72 L 60 176 L 36 152 L 56 132" />
+          </svg>
+        </div>
+
+        <div class="space-y-1">
+          <span class="text-2xl font-extrabold tracking-tight text-white block">nammaweb</span>
+          <span class="text-xs uppercase tracking-widest text-slate-400 font-semibold">AI Learning Suite for NEET / CET / JEE (Medical &amp; Engg)</span>
+        </div>
+
+        <div class="pt-3 pb-1">
+          <p class="text-xs uppercase font-bold tracking-widest text-slate-400 mb-1">helpline into nammaweb.com</p>
+          <a href="mailto:helpline@nammaweb.com" class="text-brand-light hover:text-white transition-colors text-base font-semibold">
+            helpline@nammaweb.com
+          </a>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400 pt-2">
+          <button onclick="switchPage('home')" class="hover:text-white transition-colors">Main Suite</button>
+          <a href="#gallery" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#gallery'},100);}" class="hover:text-white transition-colors">Curriculum Imagery</a>
+          <a href="#booking" onclick="if(currentPage!=='home'){switchPage('home'); setTimeout(()=>{location.href='#booking'},100);}" class="hover:text-white transition-colors">Pricing (NEET / CET / JEE)</a>
+          <button onclick="switchPage('blog')" class="hover:text-white transition-colors">SEO Insights Blog</button>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4 text-center sm:text-left">
+        <p>© 2026 NammaWeb AI Learning Suite. All Rights Reserved.</p>
+        <p>Engineered for high conversion &amp; rank achievement.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    let currentPage = 'home';
+
+    function switchPage(page) {
+      currentPage = page;
+      const homeSection = document.getElementById('page-home');
+      const blogSection = document.getElementById('page-blog');
+      const navHome = document.getElementById('nav-btn-home');
+      const navBlog = document.getElementById('nav-btn-blog');
+      const mobHome = document.getElementById('mob-btn-home');
+      const mobBlog = document.getElementById('mob-btn-blog');
+
+      if (page === 'home') {
+        homeSection.classList.remove('hidden');
+        homeSection.classList.add('block');
+        blogSection.classList.add('hidden');
+        blogSection.classList.remove('block');
+
+        navHome.classList.add('text-brand');
+        navBlog.classList.remove('text-brand');
+        mobHome.classList.add('text-brand');
+        mobBlog.classList.remove('text-brand');
+      } else {
+        homeSection.classList.add('hidden');
+        homeSection.classList.remove('block');
+        blogSection.classList.remove('hidden');
+        blogSection.classList.add('block');
+
+        navHome.classList.remove('text-brand');
+        navBlog.classList.add('text-brand');
+        mobHome.classList.remove('text-brand');
+        mobBlog.classList.add('text-brand');
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function selectCourse(name, price) {
+      if (currentPage !== 'home') {
+        switchPage('home');
+      }
+      const input = document.getElementById('bookingCourseInput');
+      input.value = `${name} -${price}`;
+      document.getElementById('booking-section').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function handleBooking(e) {
+      e.preventDefault();
+      const course = document.getElementById('bookingCourseInput').value;
+      const alertBox = document.getElementById('booking-alert');
+      alertBox.textContent = `Success! Admission request recorded for ${course}. Our team has sent the syllabus and payment verification details to your email and WhatsApp helpline.`;
+      alertBox.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
